@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  radius-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: radius-server
+    container_name: radius-server
+    ports:
+      - "1812:1812/udp"
